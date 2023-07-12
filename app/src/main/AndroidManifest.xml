@@ -16,16 +16,22 @@
         android:theme="@style/Theme.CatchUp"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".root.main.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.CatchUp">
+=======
+            android:name=".feature.intro.IntroActivity"
+            android:exported="true">
+>>>>>>> develop
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
@@ -35,6 +41,24 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:host="oauth"
                     android:scheme="kakao50af166391affe322852cf48a3cf5e38"/>
+=======
+
+        <activity
+            android:name=".feature.main.MainActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="oauth"
+                    android:scheme="kakao50af166391affe322852cf48a3cf5e38" />
+>>>>>>> develop
             </intent-filter>
         </activity>
     </application>

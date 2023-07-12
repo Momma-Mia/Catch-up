@@ -10,8 +10,16 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+<<<<<<< HEAD
         maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/'}
     }
 }
 rootProject.name = "CatchUp"
+=======
+        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+    }
+}
+
+rootProject.name = "Catch-up"
+>>>>>>> develop
 include ':app'

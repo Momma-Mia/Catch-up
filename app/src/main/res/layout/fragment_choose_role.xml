@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".feature.chooserole.ChooseRoleFragment">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_black"
+            android:text="어떤 가족\n구성원인가요?"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageButton
+            android:id="@+id/btn_dad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/catchupdad"
+            app:layout_constraintEnd_toStartOf="@id/btn_mom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아빠"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/pretendard_black"
+            app:layout_constraintEnd_toEndOf="@+id/btn_dad"
+            app:layout_constraintStart_toStartOf="@+id/btn_dad"
+            app:layout_constraintTop_toBottomOf="@+id/btn_dad" />
+
+        <ImageButton
+            android:id="@+id/btn_mom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/catchupmom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_dad"
+            app:layout_constraintTop_toTopOf="@+id/btn_dad" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="엄마"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/pretendard_black"
+            app:layout_constraintEnd_toEndOf="@+id/btn_mom"
+            app:layout_constraintStart_toStartOf="@+id/btn_mom"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mom" />
+
+        <ImageButton
+            android:id="@+id/btn_son"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/catchupson"
+            app:layout_constraintEnd_toStartOf="@id/btn_daughter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_dad" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="아들"
+            android:textSize="18sp"
+            android:fontFamily="@font/pretendard_black"
+            app:layout_constraintEnd_toEndOf="@+id/btn_son"
+            app:layout_constraintStart_toStartOf="@+id/btn_son"
+            app:layout_constraintTop_toBottomOf="@+id/btn_son" />
+        <ImageButton
+            android:id="@+id/btn_daughter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/catchupdau"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_son"
+            app:layout_constraintTop_toTopOf="@+id/btn_son" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="딸"
+            android:textSize="18sp"
+            android:fontFamily="@font/pretendard_black"
+            app:layout_constraintEnd_toEndOf="@+id/btn_daughter"
+            app:layout_constraintStart_toStartOf="@+id/btn_daughter"
+            app:layout_constraintTop_toBottomOf="@+id/btn_daughter" />
+
+        <ImageButton
+            android:id="@+id/btn_grandpa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/catchupgrandpa"
+            app:layout_constraintEnd_toStartOf="@id/btn_grandma"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_son" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="할아버지"
+            android:textSize="18sp"
+            android:fontFamily="@font/pretendard_black"
+            app:layout_constraintEnd_toEndOf="@+id/btn_grandpa"
+            app:layout_constraintStart_toStartOf="@+id/btn_grandpa"
+            app:layout_constraintTop_toBottomOf="@+id/btn_grandpa" />
+        <ImageButton
+            android:id="@+id/btn_grandma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/catchupgranma"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_grandpa"
+            app:layout_constraintTop_toTopOf="@+id/btn_grandpa" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="할머니"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/pretendard_black"
+            app:layout_constraintEnd_toEndOf="@+id/btn_grandma"
+            app:layout_constraintStart_toStartOf="@+id/btn_grandma"
+            app:layout_constraintTop_toBottomOf="@+id/btn_grandma" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
