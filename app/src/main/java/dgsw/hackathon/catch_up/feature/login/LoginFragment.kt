@@ -29,7 +29,6 @@ import java.lang.Math.ceil
 class LoginFragment : Fragment() {
 
     private val binding by lazy { FragmentLoginBinding.inflate(layoutInflater) }
-    private var bannerPosition = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -73,27 +72,14 @@ class LoginFragment : Fragment() {
             page.translationX = -pageTranslationX * position
         }
 
+        var bannerPosition = 0
+
         registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                bannerPosition = position
-            }
-
-            override fun onPageScrollStateChanged(state: Int) {
-                super.onPageScrollStateChanged(state)
-                when (state) {
-                    ViewPager2.SCROLL_STATE_IDLE ->{
-                        lifecycleScope.launch {
-                            delay(1500)
-                            setCurrentItem(++bannerPosition, true)
-                        }
-                    }
-
-                    ViewPager2.SCROLL_STATE_DRAGGING -> {}
-
-                    ViewPager2.SCROLL_STATE_SETTLING -> {
-
-                    }
+                lifecycleScope.launch {
+                    delay(2500)
+                    setCurrentItem(++bannerPosition, true)
                 }
             }
         })
