@@ -2,6 +2,7 @@ package dgsw.hackathon.catch_up.feature.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import dgsw.hackathon.catch_up.R
 
 class MainActivity : AppCompatActivity() {
@@ -9,4 +10,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
 }

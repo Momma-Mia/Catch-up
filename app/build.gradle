@@ -52,4 +52,9 @@ dependencies {
     // Jetpack Navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+
+    // Kakao
+    implementation "com.kakao.sdk:v2-friend:2.14.0"
+    implementation "com.kakao.sdk:v2-user:2.14.0"
+    implementation "com.kakao.sdk:v2-talk:2.14.0"
 }
