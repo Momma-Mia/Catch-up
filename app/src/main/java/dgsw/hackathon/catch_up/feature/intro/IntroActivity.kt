@@ -8,6 +8,7 @@ import androidx.navigation.fragment.findNavController
 import com.kakao.sdk.common.util.Utility
 import dgsw.hackathon.catch_up.R
 import dgsw.hackathon.catch_up.databinding.ActivityIntroBinding
+import kotlin.math.log
 
 class IntroActivity : AppCompatActivity() {
     private val binding: ActivityIntroBinding by lazy { ActivityIntroBinding.inflate(layoutInflater) }
@@ -17,6 +18,5 @@ class IntroActivity : AppCompatActivity() {
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navHostFragment.findNavController()
-
     }
 }

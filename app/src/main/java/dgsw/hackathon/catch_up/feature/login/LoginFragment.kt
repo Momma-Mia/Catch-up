@@ -104,7 +104,7 @@ class LoginFragment : Fragment() {
             UserApiClient.instance.loginWithKakaoAccount(requireContext()) { token, error ->
                 if (error != null) {
                     Log.d("ㅆ끼발", "3")
-                    Log.e("loginFragment", "${error.stackTrace}")
+                    Log.e("loginFragment", error.toString())
                 } else if (token != null) {
                     Log.d("ㅆ끼발", "4")
                     CatchUpApplication.prefs.apply {
