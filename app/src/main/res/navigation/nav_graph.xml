@@ -5,16 +5,7 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
 
-    <fragment
-        android:id="@+id/chooseRoleFragment"
-        android:name="dgsw.hackathon.catch_up.feature.chooserole.ChooseRoleFragment"
-        android:label="fragment_add_family"
-        tools:layout="@layout/fragment_choose_role" >
-        <action
-            android:id="@+id/action_chooseRoleFragment_to_addFamilyFragment"
-            app:destination="@id/addFamilyFragment" />
 
-    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="dgsw.hackathon.catch_up.feature.login.LoginFragment"
@@ -22,7 +13,7 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_addFamilyFragment"
-            app:destination="@id/chooseRoleFragment" />
+            app:destination="@id/addFamilyFragment" />
     </fragment>
     <fragment
         android:id="@+id/addFamilyFragment"

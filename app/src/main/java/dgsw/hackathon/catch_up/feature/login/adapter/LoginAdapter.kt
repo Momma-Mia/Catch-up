@@ -24,7 +24,7 @@ class LoginAdapter(private val items: List<Int>) : RecyclerView.Adapter<LoginAda
     }
 
     override fun onBindViewHolder(holder: LoginViewHolder, position: Int) {
-        holder.bind(items[position % items.size] - 1)
+        holder.bind(items[position % items.size])
     }
 
     override fun getItemCount(): Int {

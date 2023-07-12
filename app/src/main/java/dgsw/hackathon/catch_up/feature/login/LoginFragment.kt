@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ClientError
@@ -20,11 +19,8 @@ import dgsw.hackathon.catch_up.databinding.FragmentLoginBinding
 import dgsw.hackathon.catch_up.feature.login.adapter.LoginAdapter
 import dgsw.hackathon.catch_up.feature.main.MainActivity
 import dgsw.hackathon.catch_up.util.CatchUpApplication
-import dgsw.hackathon.catch_up.util.HorizontalMarginItemDecoration
-import dgsw.hackathon.catch_up.util.PreferenceManager
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import java.lang.Math.ceil
 
 class LoginFragment : Fragment() {
 
@@ -43,7 +39,7 @@ class LoginFragment : Fragment() {
 
         initViewPager()
 
-        if (!CatchUpApplication.prefs.isLogin()) navigateToMain()
+        if (CatchUpApplication.prefs.isLogin()) navigateToMain()
         else {
             binding.startWithKakaoButton.setOnClickListener {
                 if (UserApiClient.instance.isKakaoTalkLoginAvailable(requireContext())) {
@@ -98,15 +94,19 @@ class LoginFragment : Fragment() {
 
     private fun login(token: OAuthToken?, error: Throwable?) {
         if (error != null) {
-            Log.e("loginFragment", "${error.stackTrace}")
+            Log.e("loginFragment", "${error.message}")
+            Log.d("ㅆ끼발", "1")
 
             if (error is ClientError && error.reason == ClientErrorCause.Cancelled) {
+                Log.d("ㅆ끼발", "2")
                 return
             }
             UserApiClient.instance.loginWithKakaoAccount(requireContext()) { token, error ->
                 if (error != null) {
+                    Log.d("ㅆ끼발", "3")
                     Log.e("loginFragment", "${error.stackTrace}")
                 } else if (token != null) {
+                    Log.d("ㅆ끼발", "4")
                     CatchUpApplication.prefs.apply {
                         setString("accessToken", token.accessToken)
                         setString("refreshToken", token.refreshToken)
@@ -116,6 +116,7 @@ class LoginFragment : Fragment() {
                 }
             }
         } else if (token != null) {
+            Log.d("ㅆ끼발", "5")
             CatchUpApplication.prefs.apply {
                 setString("accessToken", token.accessToken)
                 setString("refreshToken", token.refreshToken)
