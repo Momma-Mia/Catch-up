@@ -11,14 +11,22 @@ import androidx.navigation.compose.rememberNavController
 fun NavigationHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ""
+    startDestination: String = NavGroup.Home.name
 ) {
     NavHost(
         modifier = modifier,
         navController = navController,
         startDestination = startDestination
     ) {
-//        composable()
+        composable(NavGroup.Home.name) {
+
+        }
+        composable(NavGroup.Map.name) {
+
+        }
+        composable(NavGroup.User.name) {
+
+        }
     }
 
 }

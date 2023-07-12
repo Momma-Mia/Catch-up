@@ -1,5 +1,6 @@
 package kr.hs.dgsw.mommamia.catchup.ui.theme
 
+import androidx.compose.foundation.Image
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.runtime.Composable
@@ -18,6 +19,18 @@ fun CatchUpIcon(
         modifier = modifier,
         painter = painterResource(R.drawable.ic_catch_up),
         tint = tint,
+        contentDescription = contentDescription
+    )
+}
+
+@Composable
+fun AddIcon(
+    modifier: Modifier = Modifier,
+    contentDescription: String? = null
+) {
+    Image(
+        modifier = modifier,
+        painter = painterResource(R.drawable.ic_add),
         contentDescription = contentDescription
     )
 }
