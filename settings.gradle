@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Catch-up"
+rootProject.name = "CatchUp"
 include ':app'

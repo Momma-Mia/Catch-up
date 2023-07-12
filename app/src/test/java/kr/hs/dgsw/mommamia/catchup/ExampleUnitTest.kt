@@ -1,4 +1,4 @@
-package dgsw.hackathon.catch_up
+package kr.hs.dgsw.mommamia.catchup
 
 import org.junit.Test
 
