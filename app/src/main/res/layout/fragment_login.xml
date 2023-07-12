@@ -19,14 +19,15 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_marginTop="50dp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
 
     <ImageButton
-        android:id="@+id/startWithKakaoButton"
+        android:id="@+id/start_with_kakao_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/kakao_login_large_wide"
