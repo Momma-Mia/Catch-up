@@ -2,6 +2,8 @@ package dgsw.hackathon.catch_up.feature.intro
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import dgsw.hackathon.catch_up.R
 import dgsw.hackathon.catch_up.databinding.ActivityIntroBinding
 
@@ -11,6 +13,7 @@ class IntroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navHostFragment.findNavController()
     }
 }
