@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/pretendard_black"
             android:text="어떤 가족\n구성원인가요?"
+            android:textColor="@color/black"
             android:textSize="32sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -41,6 +42,7 @@
             android:layout_height="wrap_content"
             android:text="아빠"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:fontFamily="@font/pretendard_black"
             app:layout_constraintEnd_toEndOf="@+id/btn_dad"
             app:layout_constraintStart_toStartOf="@+id/btn_dad"
@@ -60,6 +62,7 @@
             android:layout_height="wrap_content"
             android:text="엄마"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:fontFamily="@font/pretendard_black"
             app:layout_constraintEnd_toEndOf="@+id/btn_mom"
             app:layout_constraintStart_toStartOf="@+id/btn_mom"
@@ -79,6 +82,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="아들"
             android:textSize="18sp"
             android:fontFamily="@font/pretendard_black"
@@ -97,6 +101,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="딸"
             android:textSize="18sp"
             android:fontFamily="@font/pretendard_black"
@@ -118,6 +123,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="할아버지"
             android:textSize="18sp"
             android:fontFamily="@font/pretendard_black"
@@ -137,6 +143,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="할머니"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:fontFamily="@font/pretendard_black"
             app:layout_constraintEnd_toEndOf="@+id/btn_grandma"

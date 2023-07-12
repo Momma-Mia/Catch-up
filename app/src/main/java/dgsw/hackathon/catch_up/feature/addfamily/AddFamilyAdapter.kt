@@ -5,15 +5,26 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import dgsw.hackathon.catch_up.databinding.AddFamilyItemBinding
+import dgsw.hackathon.catch_up.model.User
 
 class AddFamilyAdapter(val items: ArrayList<User>): RecyclerView.Adapter<AddFamilyAdapter.ViewHolder>(){
 
+    interface OnItemClickListener{
+        fun OnItemClick(url:String)
+    }
+
+    var itemClickListener:OnItemClickListener?=null
 
     inner class ViewHolder(val binding: AddFamilyItemBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(user: User){
             with(binding){
                 nicknameTv.text = user.nickname
                 Glide.with(root).load(user.profileUrl).into(profileIv)
+            }
+            if (user.role == "추가") {
+                binding.profileIv.setOnClickListener {
+
+                }
             }
         }
     }

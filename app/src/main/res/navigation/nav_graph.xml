@@ -6,13 +6,14 @@
     app:startDestination="@id/loginFragment">
 
     <fragment
-        android:id="@+id/addFamilyFragment"
+        android:id="@+id/chooseRoleFragment"
         android:name="dgsw.hackathon.catch_up.feature.chooserole.ChooseRoleFragment"
         android:label="fragment_add_family"
         tools:layout="@layout/fragment_choose_role" >
         <action
-            android:id="@+id/action_addFamilyFragment_to_addFamilyFragment2"
-            app:destination="@id/addFamilyFragment2" />
+            android:id="@+id/action_chooseRoleFragment_to_addFamilyFragment"
+            app:destination="@id/addFamilyFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -21,11 +22,15 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_addFamilyFragment"
-            app:destination="@id/addFamilyFragment" />
+            app:destination="@id/chooseRoleFragment" />
     </fragment>
     <fragment
-        android:id="@+id/addFamilyFragment2"
+        android:id="@+id/addFamilyFragment"
         android:name="dgsw.hackathon.catch_up.feature.addfamily.AddFamilyFragment"
         android:label="fragment_add_family"
-        tools:layout="@layout/fragment_add_family" />
+        tools:layout="@layout/fragment_add_family" >
+        <argument
+            android:name="role"
+            app:argType="string" />
+    </fragment>
 </navigation>

@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
+import dgsw.hackathon.catch_up.R
 import dgsw.hackathon.catch_up.databinding.FragmentChooseRoleBinding
 
 class ChooseRoleFragment : Fragment() {
@@ -23,25 +27,30 @@ class ChooseRoleFragment : Fragment() {
     }
 
     private fun observeButtons() {
-        with(binding){
+        with(binding) {
             btnDad.setOnClickListener {
-
+                navigateToAddFamily("아빠")
             }
             btnMom.setOnClickListener {
-
+                navigateToAddFamily("엄마")
             }
             btnSon.setOnClickListener {
-
+                navigateToAddFamily("아들")
             }
             btnDaughter.setOnClickListener {
-
+                navigateToAddFamily("딸")
             }
             btnGrandma.setOnClickListener {
-
+                navigateToAddFamily("할머니")
             }
             btnGrandpa.setOnClickListener {
-
+                navigateToAddFamily("할아버지")
             }
         }
+
+    }
+
+    private fun navigateToAddFamily(text: String) {
+        findNavController().navigate(ChooseRoleFragmentDirections.actionChooseRoleFragmentToAddFamilyFragment(text))
     }
 }
